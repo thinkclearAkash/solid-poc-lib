@@ -19,8 +19,14 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      // Add path alias
+      "@components": ["./src/components"],
+      "@components/*": ["./src/components/*"],
+    },
   },
   "include": ["src"],
+  "exclude": ["**/temp/", "**/.*/", "**/lib", "**/node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
